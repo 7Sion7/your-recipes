@@ -1,0 +1,17 @@
+.home{
+    &__list{
+        list-style-type: none;
+    }
+
+    &__recipe{
+        
+        img{
+            width: 16rem;
+        }
+
+        #unsave-btn{
+            cursor: pointer;
+        }
+        
+    }
+}

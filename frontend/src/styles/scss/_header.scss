@@ -1,0 +1,80 @@
+.header{
+    background: radial-gradient(ellipse 100% 100% at 50% 40%,  #dddddda6,  rgba(177, 177, 179, 0.849), rgba(255, 255, 255, 0) 50%);
+    background-size: cover;
+    position: relative;
+
+
+    &__title{
+        display: block;
+        text-align: center;
+        text-shadow: $textShadow;
+        cursor: pointer;
+        font-size: 55px;
+        opacity: 0.85;
+        transition: opacity ease-in-out 300ms;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+    nav {
+        position: relative;
+        background: transparent;
+        padding-top: 1.0635rem;
+        padding-bottom: 1.0635rem;
+    }
+    &__links{
+        a {
+            position: relative;
+            font-size: $font-med;
+            color: $lightWhite;
+            font-weight: 600;
+            transition: color 300ms ease-in-out;
+
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
+
+            &:hover{
+                color: $white;
+            }
+        }
+    }
+
+
+
+        // //DropDown Menu Styles
+        // div {
+        //     position: relative;
+        //     display: inline-block;
+
+        //     & a{
+        //         color: $white;
+        //     }
+
+        //     & ul {
+        //         position: absolute;
+        //         top: 100%;
+        //         left: -1rem;
+        //         visibility: hidden;
+        //         padding: 0px;
+        //         background-color: grey;
+        //         border: none;
+        //         list-style: none;
+        //         text-align: center;
+
+        //     }
+        //     & button {
+        //         font-size: $font-med;
+        //         color: inherit;
+        //         background: inherit;
+        //         border: none;
+        //         cursor: pointer;
+        //     }
+        // }
+
+        // div:hover ul{
+        //     visibility: visible;
+        // }
+
+}

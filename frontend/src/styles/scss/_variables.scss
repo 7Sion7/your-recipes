@@ -1,0 +1,31 @@
+//Fonts Import
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto+Slab&family=Space+Grotesk&display=swap');
+
+$fontBody: 'Open Sans', sans-serif;
+$fontRoboto: 'Roboto Slab', serif;;
+$fontSpaceG: 'Space Grotesk', sans-serif;
+
+//Font Sizes
+$font-sm: 0.875rem; // 14px
+$font-med: 1.125rem; // 18px
+$font-lg: 1.25rem;
+$font-xlg: 3.25rem;
+
+
+//Colors
+$bodyColor: radial-gradient(circle at 90% 90%, rgb(250, 2, 2), rgba(250, 2, 2, 0.904), rgba(250, 2, 2, 0.61), rgba(250, 2, 2, 0.404) 25%),  //Bottom Right 
+radial-gradient(circle at 90% 10%, rgb(250, 2, 2), rgba(250, 2, 2, 0.904), rgba(250, 2, 2, 0.61), rgba(250, 2, 2, 0.404) 25%),  //Top Right
+radial-gradient(circle at 10% 90%, rgb(250, 2, 2), rgba(250, 2, 2, 0.904), rgba(250, 2, 2, 0.61), rgba(250, 2, 2, 0.404) 25%), //Bottom Left
+radial-gradient(circle at 10% 10%, rgb(250, 2, 2), rgba(250, 2, 2, 0.904), rgba(250, 2, 2, 0.61), rgba(250, 2, 2, 0.404) 25%)   //Top Left
+;
+$white: rgb(255, 255, 255);
+$lightWhite: rgba(255, 255, 255, 0.8);
+$lightGrey: rgba(70, 102, 133, 0.5);
+
+
+//Text-Shadow
+$textShadow: 0.03em 0.075em 0.03em #ddd, 
+0.02em 0.25em 0.4em color-mix(in srgb-linear, rgb(68, 18, 68) 50%, rgb(133, 5, 5) 50%),
+1px 0px 0px rgb(94, 17, 17),
+0px -1px 0px rgba(107, 17, 17, 0.952),
+0px 1px 0px rgb(206, 20, 20);

@@ -1,0 +1,44 @@
+//Globals
+@import "variables";
+
+*, *::before, *::after{
+    margin: 0;
+}
+
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: $bodyColor;
+    font-family: $fontBody;
+    font-size: $font-med;
+    color: $white;
+    line-height: 1.3;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+//FLEXBOX
+.flex{
+    display: inline-flex;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+
+    &-jc-c{
+        justify-content: center;
+    }
+
+    &-ai-c{
+        align-items: center;
+    }
+}
