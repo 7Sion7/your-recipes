@@ -11,6 +11,7 @@ const [cookies, _] = useCookies(["access_token"]);
 const [recipe, setRecipe] = useState({
     name: "",
     description: "",
+    category: "",
     ingredients: [],
     instructions: "",
     imageUrl: "",
@@ -109,6 +110,25 @@ return (
                 value={recipe.cookingTime}
                 onChange={handleChange}
             />
+            <label htmlFor="category">Category</label>
+            <select id="category" name="category" onChange={handleChange}>
+                <option value="">Select Category</option>
+                <option value={recipe.category}>Beef</option>
+                <option value={recipe.category}>Chicken</option>
+                <option value={recipe.category}>Seafood</option>
+                <option value={recipe.category}>Goat</option>
+                <option value={recipe.category}>Lamb</option>
+                <option value={recipe.category}>Pork</option>
+                <option value={recipe.category}>Miscellaneous</option>
+                <option value={recipe.category}>Breakfast</option>
+                <option value={recipe.category}>Dessert</option>
+                <option value={recipe.category}>Pasta</option>
+                <option value={recipe.category}>Side</option>
+                <option value={recipe.category}>Starter</option>
+                <option value={recipe.category}>Vegetarian</option>
+                <option value={recipe.category}>Vegan</option>
+                <option value={recipe.category}>Other</option>
+            </select>
             <button type="submit">Create Recipe</button>
         </form>
     </div>

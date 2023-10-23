@@ -1,5 +1,6 @@
 //Globals
 @import "variables";
+@import "~@fortawesome/fontawesome-free/css/all.css";
 
 *, *::before, *::after{
     margin: 0;
@@ -13,22 +14,34 @@ html{
 body{
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: max-content;
     background: $bodyColor;
     font-family: $fontBody;
     font-size: $font-med;
     color: $white;
     line-height: 1.3;
+    background-repeat: no-repeat;
 }
 
 a{
     text-decoration: none;
+    color: $white;
     cursor: pointer;
+}
+
+
+//Width Fit Content
+
+.fit-content{
+    &-width{
+        width: -moz-fit-content;
+        width: fit-content;
+    }
 }
 
 //FLEXBOX
 .flex{
-    display: inline-flex;
+    display: flex;
 
     &-jc-sb{
         justify-content: space-between;

@@ -1,4 +1,79 @@
 .home{
+
+    h1 {
+        margin-left: 1rem;
+    }
+    &__categories{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(405px, 1fr));
+        gap: 40px; /* Adjust the gap between home__category divs */
+        justify-content: center;
+        margin: 25px; 
+    }
+
+    &__category{
+        text-align: center;
+        padding: 1rem 0rem;
+        outline: 3px solid $green;
+        min-height: 264px;
+        border-radius: 2rem;
+        transition: all 300ms ease-in-out;
+        h3 {
+            color: $green;
+            font-weight: 1200;
+        }
+
+        img{
+            width: 80%;
+            height: auto;
+            max-height: 200px;
+            border-radius: 20px;
+        }
+
+        &:hover{
+            background-color: $green;
+            outline-color: transparent;
+            h3{
+                color: $white;
+            }
+        }
+    }
+
+    &__scrollup {
+        display: flex;
+        text-align: center; /* Center the content horizontally */
+        padding: 1rem 0rem;
+        outline: 3px solid $green;
+        min-height: 264px;
+        border-radius: 2rem;
+        transition: 300ms ease-in-out;
+
+        h1 {
+            margin: 0;
+            color: $green;
+            font-size: 4.0625rem;
+            transition: 300ms ease-in-out;
+        }
+
+        .icon{
+            color: $green;
+            font-size: 12.5rem;
+            transition: 300ms ease-in-out;
+            margin-right: 5px;
+        }
+
+        &:hover{
+            background-color: $green;
+            outline-color: transparent;
+            h1{
+                color: $white;
+            }
+            .icon{
+                color: $white;
+            }
+        }
+    }
+
     &__list{
         list-style-type: none;
     }

@@ -3,14 +3,16 @@ import mongoose from 'mongoose';
 import { RecipeModel } from "../models/Recipes.js";
 import { UserModel } from '../models/Users.js';
 import { verifyToken } from "./users.js";
+import { fetchRecipes } from '../functions/allRecipes.js';
 
 const router = express.Router();
 
 //Get All Recipes from MongoDB
 router.get("/", async (req, res) => {
     try{
-        const allRecipes = await RecipeModel.find({});
-        console.log("All recipes:", allRecipes);
+        const dbRecipes = await RecipeModel.find({});
+        const apiRecipes = await fetchRecipes();
+        let allRecipes = [...dbRecipes, ...apiRecipes];
         res.json(allRecipes);
     } catch (err) {
         res.json(err);

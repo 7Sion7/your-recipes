@@ -1,12 +1,12 @@
 .header{
-    background: radial-gradient(ellipse 100% 100% at 50% 40%,  #dddddda6,  rgba(177, 177, 179, 0.849), rgba(255, 255, 255, 0) 50%);
     background-size: cover;
     position: relative;
-
-
     &__title{
-        display: block;
-        text-align: center;
+        display: flex;
+        color: $green;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 5px;
         text-shadow: $textShadow;
         cursor: pointer;
         font-size: 55px;
@@ -27,7 +27,7 @@
         a {
             position: relative;
             font-size: $font-med;
-            color: $lightWhite;
+            color: $green;
             font-weight: 600;
             transition: color 300ms ease-in-out;
 
@@ -36,7 +36,7 @@
             }
 
             &:hover{
-                color: $white;
+                color: $green;
             }
         }
     }
