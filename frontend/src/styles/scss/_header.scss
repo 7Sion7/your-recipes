@@ -1,12 +1,10 @@
 .header{
-    background-size: cover;
     position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
     &__title{
-        display: flex;
-        color: $green;
-        width: -moz-fit-content;
-        width: fit-content;
-        margin: 5px;
+        color: $black;
         text-shadow: $textShadow;
         cursor: pointer;
         font-size: 55px;
@@ -27,7 +25,7 @@
         a {
             position: relative;
             font-size: $font-med;
-            color: $green;
+            color: $black;
             font-weight: 600;
             transition: color 300ms ease-in-out;
 
@@ -36,7 +34,7 @@
             }
 
             &:hover{
-                color: $green;
+                color: black;
             }
         }
     }

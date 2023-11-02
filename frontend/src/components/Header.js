@@ -9,10 +9,9 @@ export default function Header() {
     
 
     return (
-        <header  className='header'>
-            <Link to='/'><h1 className='header__title'>Search4Recipes</h1></Link>
-            
-            {/* <NavBar className="header__links flex flex-jc-sb flex-ai-c"/> */}
+        <header  className='header' id='#top'>
+            <Link to='/'><h1 className='header__title'>Your Recipes</h1></Link>
+            <NavBar className="header__links flex flex-jc-sb flex-ai-c"/>
         </header>
     )
 }

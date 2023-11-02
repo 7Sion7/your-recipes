@@ -13,15 +13,16 @@ $font-xlg: 3.25rem;
 
 
 //Colors
-$bodyColor: linear-gradient(rgba(212, 243, 240, 0.712), rgba(141, 153, 148, 0.719), rgba(255, 255, 255, 0.712));
+$bodyColor: linear-gradient(rgb(245, 63, 30), rgba(240, 158, 158, 0.966), rgba(245, 161, 161, 0.712), rgba(243, 32, 17, 0.856));
 $white: rgb(255, 255, 255);
+$black: rgba(0, 0, 0, 0.911);
 $lightWhite: rgba(255, 255, 255, 0.8);
 $lightGrey: rgba(70, 102, 133, 0.5);
 $green: rgba(46, 211, 197, 0.712);
 
 //Text-Shadow
 $textShadow: 0.03em 0.075em 0.03em #ddd, 
-0.02em 0.25em 0.4em color-mix(in srgb-linear, rgb(46, 211, 148) 50%, rgba(46, 186, 211, 0.562) 50%),
-1px 0px 0px rgb(46, 211, 148),
-0px -1px 0px rgba(46, 178, 211, 0.377),
-0px 1px 0px rgba(20, 169, 206, 0.479);
+0.02em 0.25em 0.4em color-mix(in srgb-linear, rgb(97, 97, 97) 50%, rgba(64, 64, 65, 0.562) 50%),
+1px 0px 0px rgb(15, 22, 19),
+0px -1px 0px rgba(29, 45, 49, 0.377),
+0px 1px 0px rgba(44, 55, 58, 0.479);

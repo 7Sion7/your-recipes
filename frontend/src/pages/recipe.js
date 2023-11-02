@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import rearrangeAPIObj from "../hooks/rearrangeAPIObj";
+import { Back } from "../hooks/BackButton";
 
 export const Recipe = ({ className }) => {
     const [recipe, setRecipe] = useState([]);
@@ -16,23 +17,24 @@ export const Recipe = ({ className }) => {
 
     return (
         <div className={className} key={recipe._id}>
-            <div className="recipe-header">
-            <h1 className="recipe-name">{recipe.name}</h1>
-            <p className="author">By: {recipe?.author || 'Unknown'}</p>
-            <img src={recipe.imageUrl}  alt={recipe.name} className="food-image" />
+            <Back></Back>
+            <div className="recipe__header">
+            <h1 className="recipe__name">{recipe.name}</h1>
+            <p className="recipe__author">By: {recipe?.author || 'Unknown'}</p>
+            <img src={recipe.imageUrl}  alt={recipe.name} className="recipe__image" />
             </div>
             <h2>Ingredients:</h2>
-                <div className="ingredients">
+                <div className="recipe__ingredients">
                     <ol>
             {recipe.ingredients && recipe.ingredients.length > 0 && recipe.ingredients.map((obj)=> (
                         <li>{obj.ingredient} - {obj.measure}</li>
                         ))}
                     </ol>
                 </div>
-            <div className="prepare">
+            <div className="recipe__instructions">
                 <h2>How to prepare:</h2>
                 <br></br>
-                <p className="instructions">{recipe.instructions}</p>
+                <p>{recipe.instructions}</p>
             </div>
         </div>
     )

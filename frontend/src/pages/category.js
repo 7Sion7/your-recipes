@@ -1,8 +1,9 @@
 import {useEffect, useState} from 'react';
 import axios from 'axios';
 import { Link, useParams } from "react-router-dom";
-import { useGetUserID } from '../hooks/GetUserID.js';
 import { useCookies } from "react-cookie";
+import { useGetUserID } from '../hooks/GetUserID.js';
+import { Back } from "../hooks/BackButton";
 import rearrangeAPIObj from '../hooks/rearrangeAPIObj.js'
 
 export const Category = ({ className }) => {
@@ -41,7 +42,7 @@ export const Category = ({ className }) => {
             }
         } 
 
-        categoryName == "All Recipes (A-Z)" ? fetchAllRecipes() : fetchRecipes();
+        categoryName === "All Recipes (A-Z)" ? fetchAllRecipes() : fetchRecipes();
         if (cookies.access_token) fetchSavedRecipe();
 
     }, [categoryName, cookies, userId])
@@ -75,6 +76,8 @@ export const Category = ({ className }) => {
 
     return (
         <div className={className}>
+        <h1>{categoryName}</h1>
+        <Back></Back>
         {recipes?.map((recipe) => (
             <div key={recipe._id}>
             <Link to={`/recipe/${recipe._id}`} className='flex'>

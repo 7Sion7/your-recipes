@@ -1,7 +1,12 @@
 .home{
-
-    h1 {
-        margin-left: 1rem;
+    color: $black;
+    > h1 {
+        width: -moz-fit-content;
+        width: fit-content;
+        margin-left: 1.5rem;
+        padding: 0;
+        border-radius: 0.5rem;
+        border-bottom: 1px solid $black;
     }
     &__categories{
         display: grid;
@@ -14,12 +19,12 @@
     &__category{
         text-align: center;
         padding: 1rem 0rem;
-        outline: 3px solid $green;
+        outline: 1px solid $black;
         min-height: 264px;
         border-radius: 2rem;
         transition: all 300ms ease-in-out;
         h3 {
-            color: $green;
+            color: $black;
             font-weight: 1200;
         }
 
@@ -31,11 +36,7 @@
         }
 
         &:hover{
-            background-color: $green;
-            outline-color: transparent;
-            h3{
-                color: $white;
-            }
+            background-color: $lightGrey;
         }
     }
 
@@ -43,34 +44,25 @@
         display: flex;
         text-align: center; /* Center the content horizontally */
         padding: 1rem 0rem;
-        outline: 3px solid $green;
+        color: $black;
+        outline: 1px solid $black;
         min-height: 264px;
         border-radius: 2rem;
-        transition: 300ms ease-in-out;
+        transition: all 150ms ease-in-out;
 
         h1 {
             margin: 0;
-            color: $green;
             font-size: 4.0625rem;
-            transition: 300ms ease-in-out;
         }
 
         .icon{
-            color: $green;
             font-size: 12.5rem;
-            transition: 300ms ease-in-out;
             margin-right: 5px;
         }
 
         &:hover{
-            background-color: $green;
+            background-color: $lightGrey;
             outline-color: transparent;
-            h1{
-                color: $white;
-            }
-            .icon{
-                color: $white;
-            }
         }
     }
 

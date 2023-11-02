@@ -33,7 +33,6 @@ export default function NavBar ({className}) {
     }
     return(
     <nav className={className}>
-        <Link to='/'>Home</Link>
         <Link to='/create-recipe'>Create Recipe</Link>
         {/* <div>
             <button type="button">Meal Type</button>

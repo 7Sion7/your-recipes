@@ -9,6 +9,7 @@ html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,8 +18,8 @@ body {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(212, 243, 240, 0.712)), color-stop(rgba(141, 153, 148, 0.719)), to(rgba(255, 255, 255, 0.712)));
-  background: linear-gradient(rgba(212, 243, 240, 0.712), rgba(141, 153, 148, 0.719), rgba(255, 255, 255, 0.712));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(245, 63, 30)), color-stop(rgba(240, 158, 158, 0.966)), color-stop(rgba(245, 161, 161, 0.712)), to(rgba(243, 32, 17, 0.856)));
+  background: linear-gradient(rgb(245, 63, 30), rgba(240, 158, 158, 0.966), rgba(245, 161, 161, 0.712), rgba(243, 32, 17, 0.856));
   font-family: "Open Sans", sans-serif;
   font-size: 1.125rem;
   color: rgb(255, 255, 255);
@@ -30,6 +31,49 @@ a {
   text-decoration: none;
   color: rgb(255, 255, 255);
   cursor: pointer;
+}
+
+.backbtn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  background-color: transparent;
+  font-size: 1.25rem;
+  color: rgba(0, 0, 0, 0.911);
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.backbtn:hover {
+  color: black;
+}
+
+.backbtn:after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  top: 1.9rem;
+  left: 0.55rem;
+  background-color: black;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  z-index: 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 0.35s ease-out;
+  transition: -webkit-transform 0.35s ease-out;
+  transition: transform 0.35s ease-out;
+  transition: transform 0.35s ease-out, -webkit-transform 0.35s ease-out;
+}
+
+.backbtn:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 .fit-content-width {
@@ -59,6 +103,10 @@ a {
           align-items: center;
 }
 
+.category {
+  color: rgba(0, 0, 0, 0.911);
+  margin-left: 1rem;
+}
 .category a {
   width: 90%;
 }
@@ -68,7 +116,6 @@ a {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
   margin-bottom: 10px;
-  margin-left: 10px;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
@@ -78,7 +125,7 @@ a {
   border-radius: 10px;
 }
 .category__recipe h1 {
-  color: rgba(46, 211, 197, 0.712);
+  color: rgba(0, 0, 0, 0.911);
   font-size: 45px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -88,8 +135,28 @@ a {
   background-color: rgb(255, 255, 255);
 }
 
-.home h1 {
-  margin-left: 1rem;
+.recipe {
+  color: rgba(0, 0, 0, 0.911);
+  margin: 1rem;
+}
+.recipe__name {
+  margin: 0;
+}
+.recipe__image {
+  width: 20%;
+  height: auto;
+}
+.home {
+  color: rgba(0, 0, 0, 0.911);
+}
+.home > h1 {
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  margin-left: 1.5rem;
+  padding: 0;
+  border-radius: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.911);
 }
 .home__categories {
   display: grid;
@@ -103,14 +170,14 @@ a {
 .home__category {
   text-align: center;
   padding: 1rem 0rem;
-  outline: 3px solid rgba(46, 211, 197, 0.712);
+  outline: 1px solid rgba(0, 0, 0, 0.911);
   min-height: 264px;
   border-radius: 2rem;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 .home__category h3 {
-  color: rgba(46, 211, 197, 0.712);
+  color: rgba(0, 0, 0, 0.911);
   font-weight: 1200;
 }
 .home__category img {
@@ -120,11 +187,7 @@ a {
   border-radius: 20px;
 }
 .home__category:hover {
-  background-color: rgba(46, 211, 197, 0.712);
-  outline-color: transparent;
-}
-.home__category:hover h3 {
-  color: rgb(255, 255, 255);
+  background-color: rgba(70, 102, 133, 0.5);
 }
 .home__scrollup {
   display: -webkit-box;
@@ -132,35 +195,24 @@ a {
   display: flex;
   text-align: center; /* Center the content horizontally */
   padding: 1rem 0rem;
-  outline: 3px solid rgba(46, 211, 197, 0.712);
+  color: rgba(0, 0, 0, 0.911);
+  outline: 1px solid rgba(0, 0, 0, 0.911);
   min-height: 264px;
   border-radius: 2rem;
-  -webkit-transition: 300ms ease-in-out;
-  transition: 300ms ease-in-out;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 .home__scrollup h1 {
   margin: 0;
-  color: rgba(46, 211, 197, 0.712);
   font-size: 4.0625rem;
-  -webkit-transition: 300ms ease-in-out;
-  transition: 300ms ease-in-out;
 }
 .home__scrollup .icon {
-  color: rgba(46, 211, 197, 0.712);
   font-size: 12.5rem;
-  -webkit-transition: 300ms ease-in-out;
-  transition: 300ms ease-in-out;
   margin-right: 5px;
 }
 .home__scrollup:hover {
-  background-color: rgba(46, 211, 197, 0.712);
+  background-color: rgba(70, 102, 133, 0.5);
   outline-color: transparent;
-}
-.home__scrollup:hover h1 {
-  color: rgb(255, 255, 255);
-}
-.home__scrollup:hover .icon {
-  color: rgb(255, 255, 255);
 }
 .home__list {
   list-style-type: none;
@@ -173,19 +225,15 @@ a {
 }
 
 .header {
-  background-size: cover;
   position: relative;
-}
-.header__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: rgba(46, 211, 197, 0.712);
   width: -moz-fit-content;
   width: -webkit-fit-content;
   width: fit-content;
-  margin: 5px;
-  text-shadow: 0.03em 0.075em 0.03em #ddd, 0.02em 0.25em 0.4em color-mix(in srgb-linear, rgb(46, 211, 148) 50%, rgba(46, 186, 211, 0.562) 50%), 1px 0px 0px rgb(46, 211, 148), 0px -1px 0px rgba(46, 178, 211, 0.377), 0px 1px 0px rgba(20, 169, 206, 0.479);
+  margin: 0 auto;
+}
+.header__title {
+  color: rgba(0, 0, 0, 0.911);
+  text-shadow: 0.03em 0.075em 0.03em #ddd, 0.02em 0.25em 0.4em color-mix(in srgb-linear, rgb(97, 97, 97) 50%, rgba(64, 64, 65, 0.562) 50%), 1px 0px 0px rgb(15, 22, 19), 0px -1px 0px rgba(29, 45, 49, 0.377), 0px 1px 0px rgba(44, 55, 58, 0.479);
   cursor: pointer;
   font-size: 55px;
   opacity: 0.85;
@@ -204,7 +252,7 @@ a {
 .header__links a {
   position: relative;
   font-size: 1.125rem;
-  color: rgba(46, 211, 197, 0.712);
+  color: rgba(0, 0, 0, 0.911);
   font-weight: 600;
   -webkit-transition: color 300ms ease-in-out;
   transition: color 300ms ease-in-out;
@@ -213,5 +261,5 @@ a {
   margin-right: 32px;
 }
 .header__links a:hover {
-  color: rgba(46, 211, 197, 0.712);
+  color: rgba(0, 0, 0, 0.911);
 }

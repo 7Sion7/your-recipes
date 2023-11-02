@@ -44,7 +44,7 @@ export const Home = ({ className }) => {
                 </div>
             </Link>
             ))}
-            <a href="#">
+            <a href="#top">
             <div className='home__scrollup'>
                 <h1>Back to the Top</h1>
                 <FontAwesomeIcon className='icon' icon={faArrowAltCircleUp} />

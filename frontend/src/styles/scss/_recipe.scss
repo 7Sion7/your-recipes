@@ -1,0 +1,27 @@
+.recipe{
+    color: $black;
+    margin: 1rem;
+    &__header{
+    
+        
+    }
+    &__name{
+        margin: 0;
+    }
+
+    &__author{
+
+    }
+
+    &__image{
+        width: 20%;
+        height: auto;
+    }   
+    &__ingredients{
+
+    }
+
+    &__instructions{
+        
+    }
+}
