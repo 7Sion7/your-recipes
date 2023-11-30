@@ -20,5 +20,3 @@ mongoose.connect(process.env.DBLink);
 
 
 app.listen(3001, () => console.log("Server Started..."));
-
-//password: Jooj-MERNStack
